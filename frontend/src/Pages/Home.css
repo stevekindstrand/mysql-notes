@@ -1,0 +1,26 @@
+.homeContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.loginDiv {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loginDiv div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.loginDiv div input {
+    margin-bottom: 0.5rem;
+}
+
+.loginDiv div .btn {
+    margin-top: 0.5rem;
+    width: 5rem;
+}

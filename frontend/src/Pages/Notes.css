@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.notesContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40rem;
+}
+
+.notesContainer input {
+    margin-top: 1rem;
+    width: 5rem;
+}
+
+.submitbtn {
+    margin: 1rem 0 4rem 0;
+}
+
+.deleteBtn {
+    margin: 0 0 4rem 0.5rem
+}
