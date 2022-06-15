@@ -4,7 +4,8 @@ const mysql = require("mysql2");
 
 //Post notes
 router.post("/", (req, res) => {
-  let sql = `INSERT INTO notes (text) VALUES ("${req.body.text}")`;
+  let saveNotes = req.app.locals.con.escape(req.body.text);
+  let sql = `INSERT INTO notes (text) VALUES (${saveNotes})`;
 
   req.app.locals.con.query(sql, function (err, result) {
     if (err) {
@@ -25,8 +26,6 @@ router.get("/:id", function (req, res) {
     res.json(result);
   });
 });
-
-module.exports = router;
 
 //Delete notes
 router.delete("/:id", function (req, res) {
